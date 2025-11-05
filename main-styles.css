@@ -713,3 +713,515 @@
 .nexus-card.animate:nth-child(6).reveal { animation-delay: 1.1s; }
 
 
+/* Section Background */
+.programs-section {
+  background: linear-gradient(135deg, #000E29, #002A67);
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+.programs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.6rem;
+  color: #D4AF37; /* Gold accent */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Program Card */
+.program-card {
+  background: rgba(255, 255, 255, 0.05); /* glass effect */
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  opacity: 1; /* visible by default */
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 232, 255, 0.5);
+}
+
+/* Program Icon */
+.program-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00E8FF;
+  text-shadow: 0 0 8px rgba(0,232,255,0.8);
+}
+
+/* Program Title */
+.program-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #D4AF37;
+  text-shadow: 0 0 6px rgba(212,175,55,0.8);
+}
+
+/* Program Description */
+.program-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1.5rem;
+}
+
+/* Program Button */
+.program-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #00E8FF;
+  color: #000E29;
+  transition: all 0.3s ease;
+}
+
+.program-btn:hover {
+  background: #D4AF37;
+  color: #000E29;
+  box-shadow: 0 0 12px #D4AF37;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Default visible (fallback) */
+.program-card {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animation-ready state (added by JS) */
+.program-card.animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.program-card.animate.reveal {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delays */
+.program-card.animate:nth-child(1).reveal { animation-delay: 0.1s; }
+.program-card.animate:nth-child(2).reveal { animation-delay: 0.3s; }
+.program-card.animate:nth-child(3).reveal { animation-delay: 0.5s; }
+.program-card.animate:nth-child(4).reveal { animation-delay: 0.7s; }
+.program-card.animate:nth-child(5).reveal { animation-delay: 0.9s; }
+.program-card.animate:nth-child(6).reveal { animation-delay: 1.1s; }
+
+
+/* Events Section */
+.events-section {
+  background: linear-gradient(135deg, #000E29, #002A67);
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+.events-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.6rem;
+  color: #D4AF37; /* Gold accent */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(212,175,55,0.8);
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* Event Card */
+.event-card {
+  display: flex;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,232,255,0.5);
+}
+
+/* Event Date */
+.event-date {
+  background: #00E8FF;
+  color: #000E29;
+  padding: 20px;
+  text-align: center;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.event-date .month {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.event-date .day {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.event-date .year {
+  font-size: 0.9rem;
+}
+
+/* Event Details */
+.event-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.event-details h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #D4AF37;
+  text-shadow: 0 0 6px rgba(212,175,55,0.8);
+}
+
+.event-location {
+  font-size: 0.95rem;
+  color: #00E8FF;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(0,232,255,0.8);
+}
+
+/* Event Meta Tags */
+.event-meta {
+  margin-bottom: 10px;
+}
+
+.event-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #00E8FF;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 3px;
+}
+
+.event-tag.featured {
+  background: #D4AF37;
+  color: #000E29;
+  font-weight: 700;
+}
+
+/* Event Description */
+.event-description {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn-register,
+.btn-explore {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-register {
+  background: #00E8FF;
+  color: #000E29;
+}
+
+.btn-register:hover {
+  background: #D4AF37;
+  color: #000E29;
+  box-shadow: 0 0 12px #D4AF37;
+}
+
+.more-events {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-explore {
+  background: transparent;
+  border: 2px solid #00E8FF;
+  color: #00E8FF;
+}
+
+.btn-explore:hover {
+  background: #00E8FF;
+  color: #000E29;
+  box-shadow: 0 0 12px #00E8FF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  .event-card {
+    flex-direction: column;
+  }
+  .event-date {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+
+
+/* Section Background */
+#get-involved {
+  background: linear-gradient(135deg, #000E29, #002A67);
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+#get-involved .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(0,232,255,0.15);
+  color: #00E8FF;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4rem;
+  color: #D4AF37;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(212,175,55,0.8);
+}
+
+.section-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Involvement Card */
+.involvement-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1; /* visible by default */
+}
+
+.involvement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,232,255,0.5);
+}
+
+/* Card Image */
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.involvement-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00E8FF;
+  text-shadow: 0 0 8px rgba(0,232,255,0.8);
+}
+
+.card-content h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #D4AF37;
+  text-shadow: 0 0 6px rgba(212,175,55,0.8);
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid #00E8FF;
+  color: #00E8FF;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.btn-outline:hover {
+  background: #00E8FF;
+  color: #000E29;
+  box-shadow: 0 0 12px #00E8FF;
+}
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation-ready state */
+.involvement-card.animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.involvement-card.animate.reveal {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delays */
+.involvement-card.animate:nth-child(1).reveal { animation-delay: 0.1s; }
+.involvement-card.animate:nth-child(2).reveal { animation-delay: 0.3s; }
+.involvement-card.animate:nth-child(3).reveal { animation-delay: 0.5s; }
+.involvement-card.animate:nth-child(4).reveal { animation-delay: 0.7s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-header h2 { font-size: 2rem; }
+  .section-header p { font-size: 1rem; }
+  .card-content h3 { font-size: 1.2rem; }
+}
+
+
+
+
