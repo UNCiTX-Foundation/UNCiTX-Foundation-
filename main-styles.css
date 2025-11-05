@@ -67,6 +67,24 @@
   box-shadow: 0 0 12px #00E8FF;
 }
 
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Default hidden state */
+.vision-fade {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Reveal class triggers animation */
+.vision-fade.reveal {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+
 
 /* Section Background */
 .mission-section {
