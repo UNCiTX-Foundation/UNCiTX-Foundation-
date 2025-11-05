@@ -1,5 +1,5 @@
 /* ================= HERO SECTION CSS ================= */
-ngo-hero {
+#ngo-hero {
   position: relative;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 4rem 0 6rem;
@@ -17,10 +17,11 @@ ngo-hero {
   text-align: center;
 }
 
+/* Badge */
 .hero-badge {
   display: inline-block;
   background-color: var(--accent-color, #ff6b6b);
-  color: var(--white, #ffffff);
+  color: #ffffff;
   padding: 8px 20px;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -29,29 +30,52 @@ ngo-hero {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
 }
 
+/* Title with Gradient Shimmer */
 .hero-title {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 800;
+  background: linear-gradient(90deg, #0f2a52, #1a3a6d, #2563eb, #1a3a6d, #0f2a52);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 2px 6px rgba(15,42,82,0.3);
+  animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
+/* Highlighted span shimmer */
 .title-highlight {
-  color: var(--primary-color, #2563eb);
+  background: linear-gradient(90deg, #1a3a6d, #0f2a52, #2563eb);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: block;
   margin-top: 0.5rem;
+  animation: shimmer 10s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
+/* Description */
 .hero-description {
   font-size: 1.2rem;
   max-width: 850px;
   margin: 0 auto 3rem;
-  color: var(--text-light, #6b7280);
+  color: #1a3a6d;
   line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
+/* Photo Grid */
 .hero-photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -59,6 +83,8 @@ ngo-hero {
   max-width: 1200px;
   margin: 0 auto 3rem;
   padding: 0 20px;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .hero-photo-column {
@@ -71,16 +97,14 @@ ngo-hero {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
   background: #fff;
 }
-
 .hero-photo-item:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
-
 .hero-photo {
   width: 100%;
   height: 280px;
@@ -88,33 +112,34 @@ ngo-hero {
   display: block;
   transition: transform 0.4s ease;
 }
-
 .hero-photo-item:hover .hero-photo {
   transform: scale(1.05);
 }
 
+/* Photo Tagline */
 .photo-tagline {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-  color: var(--white, #ffffff);
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: #e0e7ff;
   padding: 2rem 1.5rem 1.5rem;
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
   letter-spacing: 0.3px;
+  text-shadow: 0 0 6px rgba(26,58,109,0.8);
 }
 
+/* Buttons */
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
 }
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -128,29 +153,26 @@ ngo-hero {
   border: none;
   cursor: pointer;
 }
-
 .btn-explore {
-  background-color: var(--primary-color, #2563eb);
-  color: white;
+  background-color: #1a3a6d;
+  color: #fff;
 }
-
 .btn-explore:hover {
-  background-color: #1d4ed8;
+  background-color: #0f2a52;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 20px rgba(26,58,109,0.4);
 }
-
 .btn-civilization {
-  background-color: var(--accent-color, #ff6b6b);
-  color: white;
+  background-color: #0f2a52;
+  color: #fff;
 }
-
 .btn-civilization:hover {
-  background-color: #ff5252;
+  background-color: #1a3a6d;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 8px 20px rgba(26,58,109,0.4);
 }
 
+/* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -159,144 +181,66 @@ ngo-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--text-light, #6b7280);
+  color: #1a3a6d;
   font-size: 0.9rem;
   animation: bounce 2s infinite;
   cursor: pointer;
 }
-
 .scroll-arrow {
   width: 20px;
   height: 20px;
-  border-right: 2px solid var(--text-light, #6b7280);
-  border-bottom: 2px solid var(--text-light, #6b7280);
+  border-right: 2px solid #1a3a6d;
+  border-bottom: 2px solid #1a3a6d;
   transform: rotate(45deg);
   margin-top: 8px;
 }
-
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) translateX(-50%);
-  }
-  40% {
-    transform: translateY(-10px) translateX(-50%);
-  }
-  60% {
-    transform: translateY(-5px) translateX(-50%);
-  }
+  0%,20%,50%,80%,100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
 }
 
-/* ================= TABLET SCREENS ================= */
+/* Shimmer Keyframes */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Reveal Classes */
+.hero-badge.reveal,
+.hero-title.reveal,
+.hero-description.reveal,
+.hero-photo-grid.reveal,
+.hero-buttons.reveal {
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-badge.reveal { animation-delay: 0.1s; }
+.hero-title.reveal { animation-delay: 0.3s; animation-play-state: running; }
+.hero-description.reveal { animation-delay: 0.5s; }
+.hero-photo-grid.reveal { animation-delay: 0.7s; }
+.hero-buttons.reveal { animation-delay: 0.9s; }
+.title-highlight.reveal { animation-play-state: running; }
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 2.4rem;
-  }
-  
-  .hero-description {
-    font-size: 1.1rem;
-  }
-  
-  .hero-photo-grid {
-    gap: 1.5rem;
-  }
-  
-  .hero-photo {
-    height: 240px;
-  }
+  .hero-title { font-size: 2.4rem; }
+  .hero-description { font-size: 1.1rem; }
+  .hero-photo { height: 240px; }
 }
-
-/* ================= MOBILE SCREENS ================= */
 @media (max-width: 768px) {
-  #ngo-hero {
-    padding: 3rem 0 5rem;
-  }
-  
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .hero-photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0 10px;
-  }
-  
-  .hero-photo-column {
-    gap: 1rem;
-  }
-  
-  .hero-photo {
-    height: 200px;
-  }
-  
-  .photo-tagline {
-    font-size: 0.85rem;
-    padding: 1.5rem 1rem 1rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0 20px;
-  }
-  
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* ================= SMALL MOBILE SCREENS ================= */
-@media (max-width: 480px) {
-  .hero-badge {
-    font-size: 0.8rem;
-    padding: 6px 16px;
-  }
-  
-  .hero-title {
-    font-size: 1.6rem;
-  }
-  
-  .hero-description {
-    font-size: 0.95rem;
-  }
-  
-  .hero-photo-grid {
-    gap: 0.8rem;
-  }
-  
-  .hero-photo {
-    height: 160px;
-  }
-  
-  .photo-tagline {
-    font-size: 0.75rem;
-    padding: 1rem 0.8rem 0.8rem;
-  }
-  
-  .scroll-indicator {
-    bottom: 1.5rem;
-    font-size: 0.8rem;
-  }
-}
-
-/* ================= LARGE DESKTOP SCREENS ================= */
-@media (min-width: 1400px) {
-  .hero-title {
-    font-size: 3.2rem;
-  }
-  
-  .hero-description {
-    font-size: 1.3rem;
-  }
-  
-  .hero-photo {
-    height: 320px;
-  }
-}
-
+  #ngo-hero { padding: 3rem 0 5rem; }
+  .hero-title { font-size: 2rem; }
+  .hero-description { font-size: 1rem; margin-bottom: 2.5rem; }
+  .hero-photo-grid { gap: 1rem; padding: 0 10px; }
+  .hero-photo-column { gap: 1rem; }
+  .hero-photo { height: 200px; }
+  .photo-tagline { font-size: 0.85rem; padding: 1.5rem 1rem 1rem; }
+  .hero-buttons { flex-direction: column
+                 
