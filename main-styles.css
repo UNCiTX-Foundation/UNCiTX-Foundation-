@@ -463,4 +463,253 @@
 
 
 
+/* Section Base */
+.nexus-section {
+  background: linear-gradient(135deg, #000E29, #002A67);
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Orbs */
+.nexus-bg-orbs .orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,232,255,0.4), transparent);
+  animation: float 12s infinite ease-in-out;
+}
+.orb-1 { width: 200px; height: 200px; top: 10%; left: 5%; }
+.orb-2 { width: 300px; height: 300px; bottom: 15%; right: 10%; }
+.orb-3 { width: 150px; height: 150px; top: 40%; right: 25%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(15px); }
+}
+
+/* Header */
+.nexus-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem;
+  color: #D4AF37; /* Gold */
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(212,175,55,0.8);
+}
+
+.nexus-subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #00E8FF;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(0,232,255,0.8);
+}
+
+.nexus-lead {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2rem;
+}
+
+/* Filters */
+.nexus-filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.nexus-filters .filter-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #00E8FF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nexus-filters .filter-btn:hover,
+.nexus-filters .filter-btn.active {
+  background: #00E8FF;
+  color: #000E29;
+  box-shadow: 0 0 12px #00E8FF;
+}
+
+/* Grid */
+.nexus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.nexus-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nexus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,232,255,0.5);
+}
+
+/* Card Image */
+.nexus-card-image {
+  position: relative;
+}
+.nexus-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.image-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.category-badge {
+  background: #D4AF37;
+  color: #000E29;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Card Content */
+.nexus-card-content {
+  padding: 20px;
+}
+.nexus-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00E8FF;
+  text-shadow: 0 0 8px rgba(0,232,255,0.8);
+}
+.nexus-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #D4AF37;
+  text-shadow: 0 0 6px rgba(212,175,55,0.8);
+}
+.nexus-card p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Stats */
+.nexus-stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.nexus-stats .stat {
+  font-size: 0.9rem;
+  color: #00E8FF;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0,232,255,0.8);
+}
+
+/* Links */
+.nexus-link {
+  display: inline-block;
+  color: #00E8FF;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.nexus-link:hover {
+  color: #D4AF37;
+  text-shadow: 0 0 8px rgba(212,175,55,0.9);
+}
+
+/* CTA Section */
+.nexus-cta-section {
+  margin-top: 60px;
+  text-align: center;
+}
+.nexus-cta-content h3 {
+  font-size: 1.8rem;
+  color: #D4AF37;
+  text-shadow: 0 0 8px rgba(212,175,55,0.8);
+}
+.nexus-cta-content p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
+}
+.nexus-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.nexus-btn.primary {
+  background: #00E8FF;
+  color: #000E29;
+}
+.nexus-btn.primary:hover {
+  background: #D4AF37;
+  color: #000E29;
+  box-shadow: 0 0 12px #D4AF37;
+}
+.nexus-btn.secondary {
+  background: transparent;
+  border: 2px solid #00E8FF;
+  color: #00E8FF;
+}
+.nexus-btn.secondary:hover {
+  background: #00E8FF;
+  color: #000E29;
+  box-shadow: 0 0 12px #00E8FF;
+}
+
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Default visible (fallback) */
+.nexus-card {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animation-ready state (added by JS) */
+.nexus-card.animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.nexus-card.animate.reveal {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delays */
+.nexus-card.animate:nth-child(1).reveal { animation-delay: 0.1s; }
+.nexus-card.animate:nth-child(2).reveal { animation-delay: 0.3s; }
+.nexus-card.animate:nth-child(3).reveal { animation-delay: 0.5s; }
+.nexus-card.animate:nth-child(4).reveal { animation-delay: 0.7s; }
+.nexus-card.animate:nth-child(5).reveal { animation-delay: 0.9s; }
+.nexus-card.animate:nth-child(6).reveal { animation-delay: 1.1s; }
+
 
