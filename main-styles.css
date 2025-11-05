@@ -726,25 +726,6 @@
    Universal Nexus - Civilization 3.0
    Advanced Professional Design
    =================================== */
-
-:root {
-    --primary-color: #0072CE;
-    --primary-dark: #0056a3;
-    --primary-light: #e0f0ff;
-    --secondary-color: #003366;
-    --accent-color: #00A86B;
-    --text-dark: #1a1a1a;
-    --text-medium: #495057;
-    --text-light: #757575;
-    --bg-light: #f4f6f9;
-    --bg-white: #ffffff;
-    --border-color: #e0e0e0;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* ===================================
    Section Styling
    =================================== */
@@ -1388,26 +1369,6 @@
 /* ===================================== */
 /* ONSNC Foundation - Events Section CSS */
 /* ===================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #1f2937;
-  background: #f9fafb;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* ===== EVENTS SECTION ===== */
 .events-section {
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
@@ -1731,8 +1692,6 @@ body {
     font-size: 1.3rem;
   }
 }
-
-
 
 
 
