@@ -1,0 +1,328 @@
+/* ================= ONSNC FOUNDATION MEDIA CENTER STYLES ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ================= MEDIA CENTER SECTION ================= */
+
+.media-center {
+  padding: 0;
+  background-color: #f5f5f5;
+  position: relative;
+  width: 100%;
+  clear: both;
+  margin-top: 0;
+}
+
+.mc-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ================= CONTENT WRAPPER ================= */
+
+.mc-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+}
+
+/* ================= SECTION HEADER (Banner Style) ================= */
+
+.media-center .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #6b46c1 0%, #553c9a 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(107, 70, 193, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.media-center .section-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: mc-pulse 4s ease-in-out infinite;
+}
+
+@keyframes mc-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.media-center .section-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.media-center .section-title {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.media-center .section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  line-height: 1.8;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= CARDS GRID ================= */
+
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.mc-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(107, 70, 193, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e8e8e8;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.mc-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(107, 70, 193, 0.2);
+  border-color: #6b46c1;
+}
+
+.mc-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mc-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mc-card:hover img {
+  transform: scale(1.05);
+}
+
+.mc-card h3 {
+  font-size: 1.5rem;
+  color: #6b46c1;
+  margin: 20px 20px 10px;
+  font-weight: 700;
+}
+
+.mc-card p {
+  color: #666;
+  margin: 0 20px 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================= BUTTONS ================= */
+
+.card-btn {
+  display: inline-block;
+  margin: 0 20px 20px;
+  background: linear-gradient(135deg, #6b46c1 0%, #553c9a 100%);
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(107, 70, 193, 0.3);
+}
+
+.card-btn:hover {
+  background: linear-gradient(135deg, #553c9a 0%, #422e7a 100%);
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(107, 70, 193, 0.4);
+}
+
+.btn-primary {
+  display: block;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(135deg, #6b46c1 0%, #553c9a 100%);
+  color: white;
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(107, 70, 193, 0.3);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #553c9a 0%, #422e7a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(107, 70, 193, 0.4);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .mc-content-wrapper {
+    padding: 60px 20px;
+  }
+
+  .media-center .section-header {
+    padding: 40px 25px;
+    margin-bottom: 50px;
+  }
+
+  .media-center .section-title {
+    font-size: 2.3rem;
+  }
+
+  .media-center .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .mc-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .mc-content-wrapper {
+    padding: 50px 20px;
+  }
+
+  .media-center .section-header {
+    padding: 35px 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+  }
+
+  .media-center .section-badge {
+    font-size: 0.85rem;
+    padding: 6px 20px;
+  }
+
+  .media-center .section-title {
+    font-size: 2rem;
+  }
+
+  .media-center .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .mc-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .mc-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .mc-card p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 14px 35px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .mc-content-wrapper {
+    padding: 40px 15px;
+  }
+
+  .media-center .section-header {
+    padding: 30px 15px;
+    margin-bottom: 35px;
+    border-radius: 12px;
+  }
+
+  .media-center .section-badge {
+    font-size: 0.8rem;
+    padding: 5px 18px;
+    margin-bottom: 15px;
+  }
+
+  .media-center .section-title {
+    font-size: 1.6rem;
+  }
+
+  .media-center .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .mc-card-image {
+    height: 180px;
+  }
+
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 12px 30px;
+  }
+}
