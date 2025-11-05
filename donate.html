@@ -6,81 +6,28 @@
   <title>Donate Now - ONSNC Foundation</title>
   <meta name="description" content="Support ONSNC Foundation's Civilization 2.0 initiatives - Empowering communities through education, technology, and sustainable development">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="donate.css">
 </head>
 <body>
 
-  
-  <!-- 🌐 Top Header with Language Switcher -->
-  <div class="container">
-    <a href="/" class="brand" id="onsnc-brand" aria-label="ONSNC Foundation" data-i18n="hero_title">Welcome to ONSNC Foundation</a>
-
-    <div class="lang-switch" aria-label="Language selector">
-      <label for="lang-select" class="visually-hidden" id="lang-label" data-i18n="arialanglabel">Choose language</label>
-      <select id="lang-select" aria-labelledby="lang-label" aria-live="polite">
-        <option value="en">English</option>
-        <option value="hi">हिन्दी</option>
-        <option value="as">অসমীয়া</option>
-      </select>
-    </div>
-  </div>
-
-  <!-- ================= HEADER SECTION ================= -->
+  <!-- ================= Navigation Header ================= -->
   <header id="header">
-    <nav class="navbar">
-      <div class="nav-container">
-        <!-- Left: Logo + Foundation Name -->
-        <div class="header-left">
-          <div class="logo">
-            <a href="index.html">
-              <img src="https://via.placeholder.com/40x40?text=ONSNC" alt="ONSNC Foundation Logo" class="logo-img">
-            </a>
-          </div>
-          <div class="foundation-name">
-            <h1>ONSNC Foundation</h1>
-          </div>
-        </div>
-
-        <!-- Center: Donate Now Button -->
-        <div class="header-center">
-          <a href="donate.html" class="btn-donate-header">
-            <i class="fas fa-heart"></i>
-            <span>Donate Now</span>
+    <div class="container">
+      <nav class="primary">
+        <div class="site-title">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="ONSNC Foundation Logo" class="logo-img">
+            <span class="logo-text">ONSNC Foundation</span>
           </a>
         </div>
-
-        <!-- Right: Navigation Menu -->
-        <div class="header-right">
-          <button class="nav-menu-btn" id="navMenuBtn">
-            <span class="menu-text">Menu</span>
-            <i class="fas fa-bars"></i>
-          </button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="ngo.html">Our Work</a>
+          <a href="contact.html">Contact</a>
         </div>
-      </div>
-      
-      <!-- Dropdown Navigation Menu -->
-      <div class="nav-dropdown-panel" id="navDropdownPanel">
-        <ul class="nav-dropdown-list">
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-          <li><a href="ourwork.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
-          <li><a href="campaigns.html"><i class="fas fa-bullhorn"></i> Campaigns</a></li>
-          <li><a href="get-involved.html"><i class="fas fa-hands-helping"></i> Get Involved</a></li>
-          <li><a href="media-center.html"><i class="fas fa-photo-video"></i> Media Centre</a></li>
-          <li><a href="resources"><i class="fas fa-book"></i> Resource Center</a></li>
-          <li><a href="ngo-contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-          <li class="donate-link-mobile">
-            <a href="donate.html" class="btn-donate-menu">
-              <i class="fas fa-heart"></i>
-              <span>Donate Now</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
-  
 
   <!-- ================= Hero Section ================= -->
   <section class="donate-hero">
@@ -426,75 +373,36 @@
     </div>
   </section>
 
-
-    <!-- ================= FOOTER SECTION ================= -->
-  <footer id="footer">
-    <div class="footer-content">
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>🌍 ONSNC Foundation</h3>
-          <p>Building neo-sustainable communities through innovation, research, and collaborative action.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
+          <h3>ONSNC Foundation</h3>
+          <p>Building sustainable communities through education, innovation, and collaborative action.</p>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="ngo-about.html">About Us</a></li>
-            <li><a href="ourwork.html">Our Work</a></li>
-            <li><a href="campaigns.html">Campaigns</a></li>
-            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="ngo.html">Our Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Resources</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="media">Media Centre</a></li>
-            <li><a href="#resources">Resource Center</a></li>
-            <li><a href="ngo-contact.html">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li>Email: info@onsnc.org</li>
+            <li>UPI: onsnc@upi</li>
           </ul>
         </div>
       </div>
-
-      <!-- Horizontal Line -->
-      <hr class="footer-divider">
-
-      <!-- Newsletter Section - Centered -->
-      <div class="newsletter-section">
-        <h4>Subscribe to Our Newsletter</h4>
-        <p>Stay updated with our latest news and initiatives</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="text" name="name" placeholder="Name" required class="newsletter-input">
-          <input type="email" name="email" placeholder="Enter Your Email" required class="newsletter-input">
-          <button type="submit" class="btn-subscribe">
-            <span>Subscribe</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-
-      <!-- Horizontal Line -->
-      <hr class="footer-divider">
-
       <div class="footer-bottom">
         <p>&copy; 2025 ONSNC Foundation. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
       </div>
     </div>
   </footer>
 
-   <!-- Global JavaScript -->
-  <script src="global.js"></script>
   <script src="donate.js"></script>
 </body>
 </html>

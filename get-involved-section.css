@@ -1,0 +1,495 @@
+/* ================= GET INVOLVED SECTION - CSS ================= */
+/* File: get-involved-section.css */
+
+/* Section Container */
+#get-involved {
+  background: #ffffff;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional Background Pattern */
+#get-involved::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(155, 89, 182, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #0066cc, #004499);
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
+  animation: fadeInDown 0.6s ease;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: 700;
+  animation: fadeInUp 0.6s ease 0.1s backwards;
+}
+
+.section-header p {
+  font-size: 1.15rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  animation: fadeInUp 0.6s ease 0.2s backwards;
+}
+
+/* Involvement Grid */
+.involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Involvement Cards */
+.involvement-card {
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease backwards;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Image Container */
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.involvement-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/* Image Overlay Effect */
+.card-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.involvement-card:hover .card-image::after {
+  opacity: 1;
+}
+
+/* Card Content */
+.card-content {
+  padding: 30px 25px;
+}
+
+/* Staggered Animation Delays */
+.involvement-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.involvement-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.involvement-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.involvement-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Card Background Gradient on Hover */
+.involvement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(155, 89, 182, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.involvement-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Hover Effect */
+.involvement-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+/* Icon Styles */
+.involvement-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #0066cc, #9B59B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.involvement-card:hover .involvement-icon {
+  transform: scale(1.15) rotate(-5deg);
+  filter: drop-shadow(0 5px 15px rgba(0, 102, 204, 0.3));
+}
+
+/* Card Title */
+.involvement-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.involvement-card:hover h3 {
+  color: #0066cc;
+}
+
+/* Card Description */
+.involvement-card p {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  position: relative;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #0066cc;
+  transition: width 0.4s ease, height 0.4s ease;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn-outline:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+  border-color: #0066cc;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 102, 204, 0.3);
+}
+
+/* Icon in Button */
+.btn i {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse Animation for Icons */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.involvement-card:hover .involvement-icon {
+  animation: pulse 1s ease infinite;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  #get-involved {
+    padding: 80px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 2.3rem;
+  }
+
+  .involvement-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .involvement-card {
+    padding: 35px 25px;
+  }
+
+  .involvement-icon {
+    font-size: 3rem;
+  }
+
+  .involvement-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #get-involved {
+    padding: 60px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .involvement-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .involvement-card {
+    border-radius: 15px;
+  }
+
+  .card-image {
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card-content {
+    padding: 25px 20px;
+  }
+
+  .involvement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .involvement-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .involvement-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-outline {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .involvement-card {
+    padding: 25px 15px;
+  }
+
+  .involvement-icon {
+    font-size: 2.2rem;
+  }
+
+  .btn-outline {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
+
+/* Accessibility */
+.involvement-card:focus-within {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  #get-involved {
+    page-break-inside: avoid;
+  }
+
+  .involvement-card {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  .btn-outline {
+    border: 2px solid #000;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  /* Uncomment if you want dark mode support
+  #get-involved {
+    background: #1a1a1a;
+  }
+
+  .section-header h2 {
+    color: #ffffff;
+  }
+
+  .section-header p {
+    color: #cccccc;
+  }
+
+  .involvement-card {
+    background: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .involvement-card h3 {
+    color: #ffffff;
+  }
+
+  .involvement-card p {
+    color: #cccccc;
+  }
+  */
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .involvement-card {
+    border: 3px solid #000;
+  }
+
+  .btn-outline {
+    border-width: 3px;
+  }
+}
+

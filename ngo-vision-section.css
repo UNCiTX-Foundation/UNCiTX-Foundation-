@@ -1,0 +1,194 @@
+/* ================= Vision Section – Professional Blue Design ================= */
+.ngo-vision-section {
+  background: linear-gradient(135deg, #0056a3 0%, #0072CE 50%, #00A1FF 100%);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle animated background pattern */
+.ngo-vision-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.06) 0%, transparent 50%);
+  pointer-events: none;
+  animation: subtle-pulse 8s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Header Styling */
+.vision-header {
+  margin-bottom: 50px;
+}
+
+.vision-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vision-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.vision-paragraph {
+  font-size: 1.25rem;
+  color: #e8f4f8;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+/* Highlighted keywords in white */
+.highlight-text {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Button Styling */
+.vision-cta {
+  margin-top: 40px;
+}
+
+.vision-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #0072CE;
+  padding: 18px 40px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 114, 206, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.vision-btn:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.vision-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  color: #004a8f;
+}
+
+/* ================= Responsive Design ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .ngo-vision-section {
+    padding: 80px 20px;
+  }
+  
+  .vision-title {
+    font-size: 2.5rem;
+  }
+  
+  .vision-paragraph {
+    font-size: 1.15rem;
+  }
+  
+  .vision-btn {
+    padding: 16px 35px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .ngo-vision-section {
+    padding: 60px 15px;
+  }
+  
+  .vision-badge {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+  }
+  
+  .vision-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .vision-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  
+  .vision-btn {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .ngo-vision-section {
+    padding: 50px 15px;
+  }
+  
+  .vision-title {
+    font-size: 1.75rem;
+  }
+  
+  .vision-paragraph {
+    font-size: 1rem;
+  }
+  
+  .vision-btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+

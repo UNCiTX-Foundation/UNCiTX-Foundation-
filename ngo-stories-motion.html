@@ -1,0 +1,105 @@
+<section class="stories-motion" aria-label="Stories in Motion video showcase">
+    <h2 class="section-title">Stories in Motion</h2>
+
+    <!-- Play/Pause control -->
+    <button id="toggleAutoplay" class="autoplay-btn" aria-pressed="false" aria-label="Pause autoplay">⏸ Pause</button>
+
+    <!-- Main Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/rwtnaZTaqPg?autoplay=1&mute=1&loop=1&playlist=rwtnaZTaqPg&rel=0&modestbranding=1&playsinline=1"
+              title="Empowering Education in Assam"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Empowering Education in Assam</h3>
+              <p>Transforming classrooms and futures through community-led initiatives.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/0-KeQ6ZLnA?autoplay=1&mute=1&loop=1&playlist=0-KeQ6ZLnA&rel=0&modestbranding=1&playsinline=1"
+              title="Healthcare Access for All"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Healthcare Access for All</h3>
+              <p>Stories of hope and care from underserved rural communities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/po3JYab9N3c?autoplay=1&mute=1&loop=1&playlist=po3JYab9N3c&rel=0&modestbranding=1&playsinline=1"
+              title="Greener Villages"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Greener Villages</h3>
+              <p>Environmental initiatives creating lasting change at the grassroots.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/8J4cMby6aQk?autoplay=1&mute=1&loop=1&playlist=8J4cMby6aQk&rel=0&modestbranding=1&playsinline=1"
+              title="Community Empowerment"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="caption">
+              <h3>Community Empowerment</h3>
+              <p>Building resilience and leadership for sustainable development.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination + Arrows -->
+      <div class="swiper-pagination" aria-label="Slide pagination"></div>
+      <div class="swiper-button-next" aria-label="Next slide"></div>
+      <div class="swiper-button-prev" aria-label="Previous slide"></div>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar" aria-hidden="true">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="swiper myThumbs" aria-label="Video thumbnails">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/rwtnaZTaqPg/mqdefault.jpg" alt="Education in Assam"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/0-KeQ6ZLn_A/mqdefault.jpg" alt="Healthcare Access"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/po3JYab9N3c/mqdefault.jpg" alt="Greener Villages"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://img.youtube.com/vi/8J4cMby6aQk/mqdefault.jpg" alt="Community Empowerment"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Video Lightbox">
+    <span class="close" role="button" aria-label="Close">&times;</span>
+    <div class="lightbox-content">
+      <iframe id="lightbox-video" src="" title="Lightbox video" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
