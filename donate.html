@@ -3,30 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate Now - ONSNC Foundation</title>
-  <meta name="description" content="Support ONSNC Foundation's Civilization 2.0 initiatives - Empowering communities through education, technology, and sustainable development">
+  <title>UNCiTX Foundation - Building a Better Tomorrow</title>
+  <meta name="description" content="UNCiTX Foundation - Driving neo-sustainable community projects, research, and global impact initiatives">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="donate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="global-style.css">
+  <!-- Section CSS Files -->
+  <link rel="stylesheet" href="hero-section.css">
+  <link rel="stylesheet" href="main-styles.css">
 </head>
 <body>
 
-  <!-- ================= Navigation Header ================= -->
+  <!-- 🌐 Top Header with Language Switcher -->
+  <div class="container">
+    <a href="/" class="brand" id="onsnc-brand" aria-label="UNCiTX Foundation" data-i18n="hero_title">Welcome to UNCiTX Foundation</a>
+
+    <div class="lang-switch" aria-label="Language selector">
+      <label for="lang-select" class="visually-hidden" id="lang-label" data-i18n="arialanglabel">Choose language</label>
+      <select id="lang-select" aria-labelledby="lang-label" aria-live="polite">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="as">অসমীয়া</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ================= HEADER SECTION ================= -->
   <header id="header">
-    <div class="container">
-      <nav class="primary">
-        <div class="site-title">
-          <a href="index.html">
-            <img src="assets/images/logo.png" alt="ONSNC Foundation Logo" class="logo-img">
-            <span class="logo-text">ONSNC Foundation</span>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Left: Logo + Foundation Name -->
+        <div class="header-left">
+          <div class="logo">
+            <a href="index.html">
+              <img src="https://via.placeholder.com/40x40?text=ONSNC" alt="UNCiTX Foundation Logo" class="logo-img">
+            </a>
+          </div>
+          <div class="foundation-name">
+            <h1>UNCiTX Foundation</h1>
+          </div>
+        </div>
+
+        <!-- Center: Donate Now Button -->
+        <div class="header-center">
+          <a href="donate.html" class="btn-donate-header">
+            <i class="fas fa-heart"></i>
+            <span>Donate Now</span>
           </a>
         </div>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="ngo.html">Our Work</a>
-          <a href="contact.html">Contact</a>
+
+        <!-- Right: Navigation Menu -->
+        <div class="header-right">
+          <button class="nav-menu-btn" id="navMenuBtn">
+            <span class="menu-text">Menu</span>
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-      </nav>
-    </div>
+      </div>
+      
+      <!-- Dropdown Navigation Menu -->
+      <div class="nav-dropdown-panel" id="navDropdownPanel">
+        <ul class="nav-dropdown-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="ourwork.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+          <li><a href="campaigns.html"><i class="fas fa-bullhorn"></i> Campaigns</a></li>
+          <li><a href="get-involved.html"><i class="fas fa-hands-helping"></i> Get Involved</a></li>
+          <li><a href="media-center.html"><i class="fas fa-photo-video"></i> Media Centre</a></li>
+          <li><a href="resources"><i class="fas fa-book"></i> Resource Center</a></li>
+          <li><a href="ngo-contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li class="donate-link-mobile">
+            <a href="donate.html" class="btn-donate-menu">
+              <i class="fas fa-heart"></i>
+              <span>Donate Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- ================= Hero Section ================= -->
@@ -36,8 +94,8 @@
       <div class="hero-content">
         <span class="hero-badge">🌍 Make an Impact</span>
         <h1>Give Every Child a Chance to Learn and Dream</h1>
-        <p class="hero-description">Education is the foundation for a secure, dignified, and sustainable life. Through ONSNC Foundation's Civilization 2.0 initiatives, we empower children in rural, tribal, and underprivileged communities with knowledge, skills, and holistic growth opportunities.</p>
-        <a href="#donate-form" class="btn-hero">Donate Now →</a>
+        <p class="hero-description">Education 5.0 is the foundation for a secure, dignified, and neo-sustainable life. Through ONSNC Foundation's Civilization 2.0 initiatives, we empower children in rural, tribal, and underprivileged communities with knowledge, skills, and holistic growth opportunities.</p>
+        <a href="#donate" class="btn-hero">Donate Now →</a>
       </div>
     </div>
   </section>
@@ -364,7 +422,7 @@
     <div class="container">
       <div class="cta-content">
         <h2>Ready to Make a Difference?</h2>
-        <p>Join us in building a sustainable, educated, and empowered future</p>
+        <p>Join us in building a neo-sustainable, educated, and empowered future</p>
         <div class="cta-buttons">
           <a href="#donate-form" class="btn-cta-primary">Donate Now</a>
           <a href="contact.html" class="btn-cta-secondary">Contact Us</a>
@@ -378,7 +436,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>ONSNC Foundation</h3>
+          <h3>UNCiTX Foundation</h3>
           <p>Building sustainable communities through education, innovation, and collaborative action.</p>
         </div>
         <div class="footer-col">
@@ -392,13 +450,13 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li>Email: info@onsnc.org</li>
-            <li>UPI: onsnc@upi</li>
+            <li>Email: info@uncitx.org</li>
+            <li>UPI: UNCiTX@upi</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 ONSNC Foundation. All rights reserved.</p>
+        <p>&copy; 2025 UNCiTX Foundation. All rights reserved.</p>
       </div>
     </div>
   </footer>
