@@ -336,6 +336,23 @@ img {
   position: relative;
 }
 
+/* Ensure left text + right language tab placement */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-header-left {
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.top-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* Language button */
 .lang-btn {
   background: transparent;
@@ -601,6 +618,47 @@ img {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
+
+/* === Force hamburger/nav button to white on dark header === */
+.nav-menu-btn {
+  color: #ffffff !important;             /* text/label */
+  background: transparent;               /* keep clean */
+}
+
+.nav-menu-btn i,
+.nav-menu-btn .icon,
+.nav-menu-btn .menu-icon {
+  color: #ffffff !important;             /* font icons */
+}
+
+/* If your hamburger is SVG */
+.nav-menu-btn svg { fill: none; stroke: #ffffff !important; }
+.nav-menu-btn svg path,
+.nav-menu-btn svg line,
+.nav-menu-btn svg rect { stroke: #ffffff !important; }
+
+/* Hover/active: keep white, add subtle translucent highlight */
+.nav-menu-btn:hover,
+.nav-menu-btn:focus {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Open/active state (if you toggle a class) */
+.nav-menu-btn.active,
+.nav-menu-btn[aria-expanded="true"] {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Keyboard focus ring for accessibility */
+.nav-menu-btn:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.9);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+
 
 /* ================= UPDATED FOOTER SECTION ================= */
 #footer {
