@@ -1,0 +1,295 @@
+/* ================= INLINE-SVG ICONS (font-awesome replacement) =================
+   Usage:
+     <span class="icon icon-search" aria-hidden="true"></span>
+     or keep old FA class names by mapping:
+     <span class="fa fa-search icon" aria-hidden="true"></span>
+   Icons use currentColor; set color on the element.
+*/
+
+/* Base icon helper */
+.icon,
+.fa {                          /* keep .fa fallback compatibility */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  color: inherit;              /* icon color follows text color */
+  speak: none;
+  line-height: 1;
+}
+
+/* Sizing helpers */
+.icon-sm { width: 0.8em; height: 0.8em; }
+.icon-lg { width: 1.33em; height: 1.33em; }
+.icon-2x { width: 2em; height: 2em; }
+.icon-fw { width: 1.25em; text-align: center; }
+
+/* Utility to make icons accessible when needed */
+.icon[aria-hidden="true"] { pointer-events: none; }
+
+/* -- ICON SET (inline SVG as data URI) --
+   Each SVG is minified and uses 'currentColor' for fill/stroke so you can
+   control icon color with CSS (e.g., color: #fff).
+*/
+
+/* Search */
+.icon-search,
+.fa-search {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M505 442.7L405.3 343a208 208 0 10-62.3 62.3L442.7 505a24 24 0 0034 0l28.3-28.3a24 24 0 000-34zM208 352a144 144 0 11144-144 144.16 144.16 0 01-144 144z'/></svg>");
+}
+
+/* User */
+.icon-user,
+.fa-user {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='currentColor'><path d='M313.6 304c-28.7 24.3-65.9 39.6-105.6 39.6s-76.9-15.3-105.6-39.6C50.7 327.6 0 374.7 0 439.6 0 469.6 21.5 496 48 496h352c26.5 0 48-26.4 48-56.4 0-64.9-50.7-112-134.4-135.6zM224 272a112 112 0 10-112-112 112 112 0 00112 112z'/></svg>");
+}
+
+/* Times / Close */
+.icon-times,
+.fa-times,
+.icon-close {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512' fill='currentColor'><path d='M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.19 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.19 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z'/></svg>");
+}
+
+/* Chevron Right */
+.icon-chevron-right,
+.fa-chevron-right {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor'><path d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L196.452 256 34.484 94.254c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.476 239.03c9.373 9.373 9.373 24.569 0 33.941z'/></svg>");
+}
+
+/* Angle Down (caret) */
+.icon-angle-down,
+.fa-angle-down {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor'><path d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9L24.9 165c9.4-9.4 24.6-9.4 33.9 0L160 266l101.3-101c9.4-9.4 24.6-9.4 33.9 0l17.9 17.9c9.4 9.4 9.4 24.6 0 33.9L177 352.3c-9.4 9.4-24.6 9.4-34 0z'/></svg>");
+}
+
+/* Play */
+.icon-play,
+.fa-play {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='currentColor'><path d='M424.4 214.7L72.4 6.6C43.8-9.1 8 7.9 8 44v424c0 36.1 35.8 53.1 64.4 37.4l352-208.1c28.2-16.7 28.2-54.6 0-71.6z'/></svg>");
+}
+
+/* Social: Facebook (f) */
+.icon-facebook-f,
+.fa-facebook-f {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='currentColor'><path d='M279.14 288l14.22-92.66h-88.91V127.9c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.22 0-121 44.38-121 124.72V195.3H22.89V288h81.47v224h100.2V288z'/></svg>");
+}
+
+/* Social: Twitter */
+.icon-twitter,
+.fa-twitter {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M459.4 151.7c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573C67.79 293.7 39.1 269.5 20.61 237.8c13.96 2.086 27.997 2.086 41.818-1.299-47.431-9.421-83.14-51.98-83.14-102.985v-1.299c14.182 7.797 30.355 12.67 47.431 13.319C43.27 86.69 72.102 64 105.37 64c34.943 0 66.4 21.067 81.77 51.98 25.34-4.548 49.055-13.32 70.936-25.34-8.447 26.258-26.258 48.292-49.055 62.176 22.667-2.273 44.792-8.122 65.105-16.243-15.116 22.417-34.24 41.2-56.15 56.439z'/></svg>");
+}
+
+/* Social: Instagram */
+.icon-instagram,
+.fa-instagram {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='currentColor'><path d='M224.1 141c-63.6 0-115 51.4-115 115s51.4 115 115 115 115-51.4 115-115-51.3-115-115-115zm0 190.6c-41.8 0-75.6-33.8-75.6-75.6s33.8-75.6 75.6-75.6 75.6 33.8 75.6 75.6-33.8 75.6-75.6 75.6zm146.4-194.8c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zM398.8 80c-26.2-26.2-60.9-40.6-98.1-40.6H147.3C109.9 39.5 75.2 54 49 80.2 22.8 106.4 8.4 141.1 8.4 178.5v202.9c0 37.4 14.4 72.1 40.6 98.3 26.2 26.2 60.9 40.6 98.3 40.6h153.4c37.4 0 72.1-14.4 98.3-40.6 26.2-26.2 40.6-60.9 40.6-98.3V178.5c0-37.4-14.4-72.1-40.6-98.3z'/></svg>");
+}
+
+/* Fallback: if icon missing, show a simple square */
+.icon--fallback {
+  background-color: currentColor;
+  width: 0.9em;
+  height: 0.9em;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+
+/* ================= Additional Inline SVG Icons ================= */
+
+/* World / Globe (🌎) */
+.icon-world,
+.fa-world {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512' fill='currentColor'><path d='M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm120.9 367.4c-18 24.6-43.6 44.6-71.9 57.6-12.6-60.5-31.4-112.8-60.8-158.2 35.6 6.1 69.9 18.9 101.4 37.8 9.5 5.6 18 12 25.3 19.8 6.1 6.2 10.6 13.5 12. -6.9z'/></svg>");
+}
+
+/* Lightning / Bolt (⚡) */
+.icon-bolt,
+.fa-bolt,
+.icon-lightning {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 512' fill='currentColor'><path d='M296 160H184L240 0 0 192h112L48 512 296 320H184z'/></svg>");
+}
+
+/* Target / Bullseye (🎯) */
+.icon-target,
+.fa-target {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 96a152 152 0 10152 152A152.17 152.17 0 00256 104zm0 80a72 72 0 1172 72 72.08 72.08 0 01-72-72z'/></svg>");
+}
+
+/* Network / Globe with nodes (🌐) */
+.icon-network,
+.fa-network,
+.icon-globe-nodes {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512' fill='currentColor'><path d='M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm136 240h-64c-6.6 0-12 5.4-12 12v64h-56v-64c0-6.6-5.4-12-12-12h-64v-56h64c6.6 0 12-5.4 12-12V88h56v64c0 6.6 5.4 12 12 12h64z'/></svg>");
+}
+
+/* Atom / Science (⚛️) */
+.icon-atom,
+.fa-atom {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='currentColor'><path d='M312 256c0 30.9 25.1 56 56 56s56-25.1 56-56-25.1-56-56-56-56 25.1-56 56zm299 31.1c-23.2-44-61.6-87.9-106.2-126.6-49.2-42.8-101.3-73.8-141.6-86.5-56.9-17.9-115.6-8.2-160.7 27.4C135 120.7 86.2 170.7 63.9 216.4c-30.7 66.1-16.4 127.2 45.9 159.1 26.8 13.6 57.3 19.6 86.7 20.1 32.9.6 64.9-5.1 94.9-16.8 30.6-11.9 58.8-29 84.2-50.4 26.2-22.1 49.7-47.8 70.7-76.6 23.4-31.9 41.6-67.2 53.8-105.8 6.7-22.6 12.6-45.8 17.5-68.4 12.2 18.5 22.8 38.1 31.3 58.9 8.9 22.4 16.3 45.7 22.1 69.3 6.3 25.9 11.2 52.3 14.7 78.6 7.8 59.7-.9 114.3-25.1 153.9 39.8-34.6 66.6-82.3 71.4-141.1 1.9-23.8 1.3-47.8-1.6-71.6z'/></svg>");
+}
+
+/* Infinity (♾️) */
+.icon-infinity,
+.fa-infinity {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='currentColor'><path d='M529.2 64c-57.6 0-102.6 31.6-128.9 60.8-14 15.8-26.9 33.7-40 49.8C331.6 170.9 299.8 192 256 192s-75.6-21.1-104.3-17.4c-13.1-16.1-26-34-40-49.8C132.8 95.6 87.8 64 30.2 64 13.6 64 0 77.6 0 94.2c0 64.7 64.9 160 160 160 48 0 86.4-22 114.6-48.1C361.6 190.3 400 160 448 160c96 0 160-95.3 160-160 0-16.6-13.6-30.2-30.8-30.2-57.6 0-102.6 31.6-128.9 60.8-14 15.8-26.9 33.7-40 49.8-28.7 25.5-60.5 46.6-104.3 46.6s-75.6-21.1-104.3-46.6c-13.1-16.1-26-34-40-49.8C331.6 95.6 299.8 64 256 64c-96 0-160 95.3-160 160S160 384 256 384c96 0 160-95.3 160-160S529.2 64 529.2 64z'/></svg>");
+}
+
+/* Envelope / Mail (✉️) */
+.icon-mail,
+.fa-envelope,
+.icon-email {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M502.3 190.8L327.4 338.1c-19.4 17.6-48.9 17.6-68.3 0L9.7 190.8C3.9 186.2 0 179.1 0 171.3V120c0-22.1 17.9-40 40-40h432c22.1 0 40 17.9 40 40v51.3c0 7.8-3.9 14.9-9.7 19.5z'/></svg>");
+}
+
+/* Lightbulb / Idea (💡) */
+.icon-light,
+.fa-lightbulb {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512' fill='currentColor'><path d='M160 0C71.5 0 0 71.6 0 160c0 59.7 35.2 111.1 83.9 136.6 3.6 1.8 5.8 5.6 5.8 9.6 0 6.6-5.4 12-12 12H64c-17.7 0-32 14.3-32 32v16c0 17.7 14.3 32 32 32h224c17.7 0 32-14.3 32-32v-16c0-17.7-14.3-32-32-32h-13.7c-6.6 0-12-5.4-12-12 0-4 2.2-7.8 5.8-9.6C316.8 271.1 352 219.7 352 160 352 71.6 280.5 0 192 0H160z'/></svg>");
+}
+
+/* Heart / Love (❤️) */
+.icon-heart,
+.fa-heart {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M462.3 62.7C407 7.4 324.8-10.6 256 42.6 187.2-10.6 105 7.4 49.7 62.7c-54.5 54.5-61.8 143.6-16.3 202L239 472.2c12 11 28.3 17.4 45 17.4s33-6.4 45-17.4L478.6 264.7c45.4-58.4 38.1-147.5-16.3-202z'/></svg>");
+}
+
+/* Handshake / Partnership (🤝) */
+.icon-handshake,
+.fa-handshake {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='currentColor'><path d='M609.7 97.1L542.9 30.3c-18.7-18.7-49.1-18.7-67.9 0L403 103.1l90.5 90.5 48.1-48.1 67.9 67.9c9.4 9.4 24.6 9.4 33.9 0l12.3-12.3c9.4-9.4 9.4-24.6 0-33.9L609.7 97.1zM0 352v48c0 26.5 21.5 48 48 48h64l80-160-96-96L0 352z'/></svg>");
+}
+
+/* Medal / Award (🎖️) */
+.icon-medal,
+.fa-medal,
+.icon-award {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M288 0h-64v128H0v64h224v320h64V192h224v-64H288V0z'/></svg>");
+}
+
+/* Megaphone / Announcement (📢) */
+.icon-megaphone,
+.fa-megaphone,
+.icon-announce {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='currentColor'><path d='M632 192H496L320 64v384l176-128h136c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16z'/></svg>");
+}
+
+/* Books / Library (📚) */
+.icon-books,
+.fa-books {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M528 64H152c-13.3 0-24 10.7-24 24v320h400V88c0-13.3-10.7-24-24-24zM24 96H0v336c0 22.1 17.9 40 40 40h464V120c0-26.5-21.5-48-48-48H152v-8c0-13.3 10.7-24 24-24h352c22.1 0 40 17.9 40 40v352H24V96z'/></svg>");
+}
+
+/* Chart / Growth (📈) */
+.icon-chart,
+.fa-chart-line {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M576 448H0v32h576v-32zM496 128l-96 96-128-128-192 192v96h96v-64l160-160 128 128 128-128V128z'/></svg>");
+}
+
+/* Calendar (📅) */
+.icon-calendar,
+.fa-calendar {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='currentColor'><path d='M400 64h-48V24c0-13.3-10.7-24-24-24s-24 10.7-24 24v40H144V24c0-13.3-10.7-24-24-24S96 10.7 96 24v40H48C21.5 64 0 85.5 0 112v320c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48z'/></svg>");
+}
+
+/* Timer / Clock (⏲️) */
+.icon-timer,
+.fa-timer,
+.icon-clock {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M256 48c-114.9 0-208 93.1-208 208s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm80 24h-32v64h32V72zM256 144a24 24 0 0124 24v80h-88c-13.3 0-24 10.7-24 24s10.7 24 24 24h112c13.3 0 24-10.7 24-24V168a24 24 0 00-24-24H256z'/></svg>");
+}
+
+/* Shield / Security (🛡️) */
+.icon-shield,
+.fa-shield {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M466.5 83.7L272 24c-4.9-1.6-10.2-1.6-15.1 0L45.5 83.7C36.4 86.4 32 95.6 32 105.6V232c0 138 89 262.7 224 295.9 135-33.2 224-157.9 224-295.9V105.6c0-10-4.4-19.2-13.5-21.9z'/></svg>");
+}
+
+/* Check / Success (✅) */
+.icon-check,
+.fa-check {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M173.9 439.4L7 272.5c-9.4-9.4-9.4-24.6 0-33.9l33.9-33.9c9.4-9.4 24.6-9.4 33.9 0L192 312l248.1-248.1c9.4-9.4 24.6-9.4 33.9 0l33.9 33.9c9.4 9.4 9.4 24.6 0 33.9L207.9 439.4c-9.4 9.4-24.6 9.4-33.9 0z'/></svg>");
+}
+
+/* Recycle (♻️) */
+.icon-recycle,
+.fa-recycle {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M472.3 359.7l-86.6-50.1 20.9-36.2 33.3 19.3V192h-128v64l45.8-26.5L307 252l-86.6 50.1c-28.1 16.3-61.2 16.3-89.3 0L20 272v96h128v-64l86.6 50.1c28.1 16.3 61.2 16.3 89.3 0L492 272v87.7c0 14.6-15.5 23.3-19.7 16z'/></svg>");
+}
+
+/* Cosmos / Galaxy (🌌) */
+.icon-galaxy,
+.fa-galaxy {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M288 0C129.2 0 0 129.2 0 288s129.2 288 288 288 288-129.2 288-288S446.8 0 288 0zm48 120c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24z'/></svg>");
+}
+
+/* Water Drop / Fluid (💧) */
+.icon-water,
+.fa-water,
+.icon-drop {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' fill='currentColor'><path d='M192 0C192 0 64 160 64 256c0 88.4 71.6 160 160 160s160-71.6 160-160C384 160 256 0 192 0z'/></svg>");
+}
+
+/* Tree / Forest (🌲) */
+.icon-tree,
+.fa-tree {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='currentColor'><path d='M224 0l-64 112H32l77 92-29 36h57v96h64v-96h57l-29-36 77-92H288L224 0z'/></svg>");
+}
+
+/* Blue heart (💙) - same as heart but default color can be set */
+.icon-heart-blue {
+  background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M462.3 62.7C407 7.4 324.8-10.6 256 42.6 187.2-10.6 105 7.4 49.7 62.7c-54.5 54.5-61.8 143.6-16.3 202L239 472.2c12 11 28.3 17.4 45 17.4s33-6.4 45-17.4L478.6 264.7c45.4-58.4 38.1-147.5-16.3-202z'/></svg>\");
+}
+
+/* Camera (📸) */
+.icon-camera,
+.fa-camera {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M528 160h-88l-34-56H170l-34 56H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V208c0-26.5-21.5-48-48-48zM288 400c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z'/></svg>");
+}
+
+/* Palette / Art (🎨) */
+.icon-palette,
+.fa-palette {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M279.6 512C405.3 512 512 405.3 512 279.6c0-64.1-25.9-123.1-68.2-166.3C384.2 71.6 332 48 279.6 48 125.6 48 0 173.6 0 327.6 0 381.2 34 427.4 83.8 455c14.5 7.8 31.5-1.3 33.9-16.6 6.3-39.6 43.3-68.3 84.1-68.3 56.9 0 103.8 46.9 103.8 103.8 0 11.1 9 20.1 20.1 20.1H279.6z'/></svg>");
+}
+
+/* Video / Film (📽️) */
+.icon-film,
+.fa-film {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M576 96v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32h448c35.3 0 64 28.7 64 64zM96 96H64v48h32V96zm0 128H64v48h32v-48zM288 96h-32v48h32V96zM288 224h-32v48h32v-48z'/></svg>");
+}
+
+/* Trophy / Winner (🏆) */
+.icon-trophy,
+.fa-trophy {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='currentColor'><path d='M552 64H488c0-35.3-28.7-64-64-64H152c-35.3 0-64 28.7-64 64H24C10.7 64 0 74.7 0 88v40c0 66.3 44.2 121.5 104 139.6V320c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64v-52.4c59.8-18.1 104-73.3 104-139.6V88c0-13.3-10.7-24-24-24z'/></svg>");
+}
+
+/* Balance / Justice (⚖️) */
+.icon-balance,
+.fa-balance {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M496 448H16c-8.8 0-16 7.2-16 16v16h512v-16c0-8.8-7.2-16-16-16zM256 32l128 96H256v208c0 17.7-14.3 32-32 32s-32-14.3-32-32V128H128L256 32z'/></svg>");
+}
+
+/* Desktop / Justice (⚖️) */
+.icon-balance,
+.fa-balance {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='currentColor'><path d='M496 448H16c-8.8 0-16 7.2-16 16v16h512v-16c0-8.8-7.2-16-16-16zM256 32l128 96H256v208c0 17.7-14.3 32-32 32s-32-14.3-32-32V128H128L256 32z'/></svg>");
+}
+
+/* Desktop / Computer (🖥️) */
+.icon-desktop,
+.fa-desktop {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='currentColor'><path d='M624 64H16C7.2 64 0 71.2 0 80v288c0 8.8 7.2 16 16 16h240v32H160c-17.7 0-32 14.3-32 32v16h384v-16c0-17.7-14.3-32-32-32H384v-32h240c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z'/></svg>");
+}
+
+/* Battery / Power (🔋) */
+.icon-battery,
+.fa-battery {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='currentColor'><path d='M544 160H32C14.3 160 0 174.3 0 192v128c0 17.7 14.3 32 32 32h512c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm96 80v32c0 17.7-14.3 32-32 32h-32V208h32c17.7 0 32 14.3 32 32z'/></svg>");
+}
