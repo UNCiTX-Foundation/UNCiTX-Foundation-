@@ -3,14 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Involved | ONSNC Foundation</title>
-  <link rel="stylesheet" href="getinvolved.css">
+  <title>Get Involved | UNCITX Foundation</title>
+  <link rel="stylesheet" href="global-style.css">
+  <link rel="stylesheet" href="ngo-getinvolved.css">
 </head>
 <body>
+
+  
+  <!-- 🌐 Top Header with Language Switcher -->
+<div class="top-header" role="banner">
+  <!-- Left: Brand/Welcome -->
+  <div class="top-header-left">
+    <a href="/" class="brand" id="uncitx-brand" aria-label="UNCITX Foundation" data-i18n="hero_title">
+      Welcome to UNCITX Foundation
+    </a>
+  </div>
+
+  <!-- Right: Language controls -->
+  <div class="top-header-right">
+    <!-- Desktop: button + dropdown -->
+    <div class="lang-group lang-desktop" aria-label="Language selector (desktop)">
+      <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+        <i class="ri-translate-2" aria-hidden="true"></i>
+        <span>Language</span>
+      </button>
+      <ul class="language-dropdown" id="lang-menu" role="menu" aria-labelledby="lang-btn">
+        <li role="menuitem" tabindex="-1" data-lang="en">English</li>
+        <li role="menuitem" tabindex="-1" data-lang="hi">हिन्दी</li>
+        <li role="menuitem" tabindex="-1" data-lang="as">অসমীয়া</li>
+      </ul>
+    </div>
+
+    <!-- Mobile: native select -->
+    <div class="lang-group lang-mobile" aria-label="Language selector (mobile)">
+      <label for="lang-select" class="visually-hidden" id="lang-label" data-i18n="arialanglabel">Choose language</label>
+      <select id="lang-select" aria-labelledby="lang-label" aria-live="polite">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="as">অসমীয়া</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Left: Logo + Foundation Name -->
+        <div class="header-left">
+          <div class="logo">
+            <a href="index.html">
+              <img src="uncitx-logo.png" alt="UNCITX Foundation Logo" class="logo-img">
+            </a>
+          </div>
+          <div class="foundation-name">
+            <h1>UNCITX Foundation</h1>
+          </div>
+        </div>
+
+        <!-- Center: Donate Now Button -->
+        <div class="header-center">
+          <a href="donate.html" class="btn-donate-header">
+            <i class="fas fa-heart"></i>
+            <span>Donate Now</span>
+          </a>
+        </div>
+
+        <!-- Right: Navigation Menu -->
+        <div class="header-right">
+          <button class="nav-menu-btn" id="navMenuBtn">
+            <span class="menu-text">Menu</span>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Dropdown Navigation Menu -->
+      <div class="nav-dropdown-panel" id="navDropdownPanel">
+        <ul class="nav-dropdown-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="ngo-about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="ourwork.html"><i class="fas fa-briefcase"></i> Our Work</a></li>
+          <li><a href="campaigns.html"><i class="fas fa-bullhorn"></i> Campaigns</a></li>
+          <li><a href="ngo-getinvolved.html"><i class="fas fa-hands-helping"></i> Get Involved</a></li>
+          <li><a href="media-center.html"><i class="fas fa-photo-video"></i> Media Centre</a></li>
+          <li><a href="resources.html"><i class="fas fa-book"></i> Resource Center</a></li>
+          <li><a href="ngo-contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+          <li class="donate-link-mobile">
+            <a href="donate.html" class="btn-donate-menu">
+              <i class="fas fa-heart"></i>
+              <span>Donate Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
   <!-- HERO -->
   <header class="hero">
     <h1>Get Involved & Make a Difference</h1>
-    <p>Be part of our mission to create sustainable change. Multiple ways to contribute and make an impact.</p>
+    <p>Be part of our mission to create neo-sustainable, neo-mobility, neo-resilience change. Multiple ways to contribute and make an impact.</p>
   </header>
 
   <!-- 4 SECTIONS GRID -->
@@ -48,10 +142,92 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>ONSNC Foundation | Contact: onsnc.global@gmail.com</p>
+  
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>🌍 UNCITX Foundation</h3>
+          <p>Building neo-sustainable communities through innovation, research, and collaborative action.</p>
+
+           <!-- Footer Bottom -->
+     <div class="footer-bottom">
+      <p><strong>Concept & Authorship:</strong> Shivanta Ronghang</p>
+      <p>Founder, CEO of<strong>UNCITX</strong> — Universal Nexus Civilization Innovative Transformation for Next Era Civilization</p>
+      <p class="footer-tagline">Building Civilization 3.0 through ethical innovation, unified governance, and human evolution.</p>
+      </div>
+
+         <div class=" address">
+         <p><b>Address: Dhuli Maradiring, Pabhoi Road, Biswanath Chariali, Assam, India, 784176</b></p>
+           <p>Contact: 9864469182</p>
+         </div>
+           
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ngo-about.html">About Us</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="campaigns.html">Campaigns</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="media">Media Centre</a></li>
+            <li><a href="#resources">Resource Center</a></li>
+            <li><a href="ngo-contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Horizontal Line -->
+      <hr class="footer-divider">
+
+      <!-- Newsletter Section - Centered -->
+      <div class="newsletter-section">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Stay updated with our latest news and initiatives</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="text" name="name" placeholder="Name" required class="newsletter-input">
+          <input type="email" name="email" placeholder="Enter Your Email" required class="newsletter-input">
+          <button type="submit" class="btn-subscribe">
+            <span>Subscribe</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Horizontal Line -->
+      <hr class="footer-divider">
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 UNCITX Foundation. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <script src="getinvolved.js"></script>
+   <!-- Global JavaScript -->
+  <script src="global-script.js"></script>
+  
+  <!-- Section JavaScript Files -->
+  <script src="header-language.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ngo-getinvolved.js"></script>
 </body>
 </html>
