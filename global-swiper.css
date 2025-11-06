@@ -1,0 +1,197 @@
+/* ================= GLOBAL SWIPER CSS ================= */
+
+/* Container */
+.swiper-container,
+.swiper {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Wrapper & slides */
+.swiper-wrapper {
+  display: flex;
+  transition-timing-function: ease;
+  box-sizing: border-box;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Basic slide content helper */
+.swiper-slide .slide-inner {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Images: cover, responsive, lazy placeholders */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  -o-object-fit: cover;
+}
+
+/* Lazy loading placeholder */
+.swiper-lazy-preloader {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: rgba(255,255,255,0.6);
+  animation: swiper-spin 1s linear infinite;
+  margin: 0 auto;
+}
+@keyframes swiper-spin { to { transform: rotate(360deg); } }
+
+/* Spacing helpers (use on container to change inter-slide spacing) */
+.swiper--gutter-8  .swiper-slide { padding-left: 4px; padding-right: 4px; }
+.swiper--gutter-16 .swiper-slide { padding-left: 8px; padding-right: 8px; }
+.swiper--gutter-24 .swiper-slide { padding-left: 12px; padding-right: 12px; }
+
+/* Pagination (bullets) */
+.swiper-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.45);
+  border-radius: 50%;
+  opacity: 1;
+  transition: transform .25s ease, background .25s ease;
+}
+.swiper-pagination-bullet-active {
+  background: var(--primary-color, #1a3a6d);
+  transform: scale(1.25);
+  box-shadow: 0 6px 18px rgba(26,58,109,0.18);
+}
+
+/* Navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 30;
+  cursor: pointer;
+  transition: background .18s ease, transform .18s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0,0,0,0.6);
+  transform: translateY(-50%) scale(1.03);
+}
+.swiper-button-next { right: 12px; }
+.swiper-button-prev { left: 12px; }
+
+/* Arrow icon minimal reset for custom SVG or pseudo-element */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px;
+  color: inherit;
+  opacity: 0.95;
+}
+
+/* Accessibility focus states */
+.swiper-button-next:focus,
+.swiper-button-prev:focus,
+.swiper-pagination-bullet:focus {
+  outline: 3px solid rgba(37,99,235,0.18);
+  outline-offset: 3px;
+  box-shadow: 0 6px 20px rgba(37,99,235,0.12);
+}
+
+/* Text/Caption overlay helper */
+.swiper-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18%;
+  padding: 1rem 1.25rem;
+  color: #fff;
+  text-align: center;
+  z-index: 25;
+  text-shadow: 0 6px 24px rgba(0,0,0,0.45);
+  pointer-events: none;
+}
+.swiper-caption .caption-title {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+.swiper-caption .caption-sub {
+  font-size: clamp(.9rem, 1.6vw, 1rem);
+  color: rgba(255,255,255,0.92);
+}
+
+/* Card / content slides: shadow + rounded corners */
+.swiper-slide .card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(11,22,50,0.06);
+}
+
+/* Responsive breakpoints (adjust visual spacing rather than JS defaults) */
+@media (min-width: 640px) {
+  .swiper { padding-bottom: 28px; }
+  .swiper-button-next, .swiper-button-prev { width: 52px; height: 52px; }
+}
+@media (min-width: 1024px) {
+  .swiper { padding-bottom: 36px; }
+  .swiper-button-next, .swiper-button-prev { width: 64px; height: 64px; }
+  .swiper-pagination { bottom: 18px; }
+}
+
+/* Dark background variant (use on hero carousels) */
+.swiper--dark .swiper-pagination-bullet { background: rgba(255,255,255,0.35); }
+.swiper--dark .swiper-pagination-bullet-active { background: #ffffff; box-shadow: 0 10px 30px rgba(15,42,82,0.3); }
+.swiper--dark .swiper-button-next,
+.swiper--dark .swiper-button-prev { background: rgba(255,255,255,0.12); color: #fff; }
+.swiper--dark .swiper-button-next:hover,
+.swiper--dark .swiper-button-prev:hover { background: rgba(255,255,255,0.18); }
+
+/* Utility: make navigation/pagination scoped (if you use per-instance elements) */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev,
+.swiper .swiper-pagination { position: absolute; }
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .swiper-wrapper,
+  .swiper-slide,
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination-bullet {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
