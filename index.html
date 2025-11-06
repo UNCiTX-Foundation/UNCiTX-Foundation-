@@ -19,10 +19,31 @@
 <body>
 
   <!-- 🌐 Top Header with Language Switcher -->
-  <div class="container">
-    <a href="/" class="brand" id="onsnc-brand" aria-label="UNCiTX Foundation" data-i18n="hero_title">Welcome to UNCiTX Foundation</a>
+<div class="top-header" role="banner">
+  <!-- Left: Brand/Welcome -->
+  <div class="top-header-left">
+    <a href="/" class="brand" id="onsnc-brand" aria-label="UNCiTX Foundation" data-i18n="hero_title">
+      Welcome to UNCiTX Foundation
+    </a>
+  </div>
 
-    <div class="lang-switch" aria-label="Language selector">
+  <!-- Right: Language controls -->
+  <div class="top-header-right">
+    <!-- Desktop: button + dropdown -->
+    <div class="lang-group lang-desktop" aria-label="Language selector (desktop)">
+      <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+        <i class="ri-translate-2" aria-hidden="true"></i>
+        <span>Language</span>
+      </button>
+      <ul class="language-dropdown" id="lang-menu" role="menu" aria-labelledby="lang-btn">
+        <li role="menuitem" tabindex="-1" data-lang="en">English</li>
+        <li role="menuitem" tabindex="-1" data-lang="hi">हिन्दी</li>
+        <li role="menuitem" tabindex="-1" data-lang="as">অসমীয়া</li>
+      </ul>
+    </div>
+
+    <!-- Mobile: native select -->
+    <div class="lang-group lang-mobile" aria-label="Language selector (mobile)">
       <label for="lang-select" class="visually-hidden" id="lang-label" data-i18n="arialanglabel">Choose language</label>
       <select id="lang-select" aria-labelledby="lang-label" aria-live="polite">
         <option value="en">English</option>
@@ -31,6 +52,7 @@
       </select>
     </div>
   </div>
+</div>
 
   <!-- ================= HEADER SECTION ================= -->
   <header id="header">
